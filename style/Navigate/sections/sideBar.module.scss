@@ -1,0 +1,10 @@
+@use '../../utils/media_breakpoint' as *;
+
+@include desktop() {
+    .block {
+        height: 100vh;
+        width: 62px;
+        background-color: white;
+    }
+
+}   

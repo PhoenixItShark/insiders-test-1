@@ -1,0 +1,125 @@
+@use "../../utils/media_breakpoint" as *;
+
+@include desktop() {
+  .block {
+    z-index: 50;
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    border-left: rgba(174, 182, 206, 0.2) 1px solid;
+  }
+  .nav_wrapper {
+    // overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-top: rgba(174, 182, 206, 0.2) 1px solid;
+  }
+  .tab {
+    user-select: none;
+    padding: 0 20 0 20;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    width: auto;
+    height: 100%;
+    background-color: #fefefe;
+    position: relative;
+    white-space: nowrap;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 35%;
+      width: 1px;
+      height: 33%;
+      background-color: rgba(174, 182, 206, 0.2);
+    }
+    &:hover {
+      background-color: #f1f5f8;
+    }
+  }
+  .simpleTab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20 0 20;
+  }
+  .list_button {
+    user-select: none;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    width: 36px;
+    height: 50px;
+    background-color: #4690e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-left: 1px solid rgba(174, 182, 206, 0.2);
+  }
+  .list_icon {
+    width: 36px;
+  }
+  .dropdown_wrapper {
+    position: absolute;
+    right: 1%;
+    top: 100%; /* сразу под навигацией */
+    z-index: 100; /* поверх всех элементов */
+    display: flex;
+    justify-content: end;
+  }
+
+  .dropdown {
+    box-shadow: 0px 16px 30px 0px #7B7F9112;
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+  }
+  .dropdown_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    height: 50px;
+    background-color: white;
+    padding: 0 15 0 15;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 35%;
+      width: 1px;
+      width: 80%;
+      background-color: rgba(174, 182, 206, 0.2);
+    }
+    &:last-child {
+      border-radius: 0 0 0 4;
+    }
+  }
+  .content_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  .context_menu {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+     background-color: white;
+     padding: 10 15;
+     color: #7F858D;
+     border-radius: 4px;
+  }
+}
